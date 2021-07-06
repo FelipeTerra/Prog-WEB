@@ -23,9 +23,9 @@ class Genitor extends Pessoa {
     //     $this->nome = $nome;
     // }
     
-    // public function getFilhos(){
-    //     return $this->nome;
-    // }
+    public function getFilhos(){
+        return $this->filhos;
+    }
 
 }
 
