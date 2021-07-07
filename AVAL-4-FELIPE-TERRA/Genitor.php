@@ -39,7 +39,3 @@ class Genitor extends Pessoa {
 }
 
 ?>
-
-<!-- public function setFilhos(){
-    $this->nome = $nome;
-} -->

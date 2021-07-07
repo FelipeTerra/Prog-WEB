@@ -7,16 +7,16 @@ $g1 = new Genitor("Felipe Terra", 28, 201611640055);
 $g2 = new Genitor("Amanda Sampaio", 25, 201611640055);
 
 $f1 = new Filho("Pedro Oliveira", 10, 201611640055);
-$f2 = new Filho("Gustavo Oliveira", 6, 201611640055);
-$f3 = new Filho("Maria Costa", 6, 201611640055);
-$f4 = new Filho("João Pedro", 6, 201611640055);
+// $f2 = new Filho("Gustavo Oliveira", 6, 201611640055);
+// $f3 = new Filho("Maria Costa", 6, 201611640055);
+// $f4 = new Filho("João Pedro", 6, 201611640055);
 
 $g1->adicionarFilho($f1);
-$g1->adicionarFilho($f2);
-$g1->adicionarFilho($f3);
-$g1->adicionarFilho($f4);
+// $g1->adicionarFilho($f2);
+// $g1->adicionarFilho($f3);
+// $g1->adicionarFilho($f4);
 
-$g1->removerFilho($f2);
+//$g1->removerFilho($f2);
 
 
 echo $g1->getHtml();
