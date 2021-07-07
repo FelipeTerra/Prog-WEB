@@ -6,7 +6,7 @@ class MinhaClasseBase {
     private   $atributo3;
 
     function __construct($at1, $at2, $at3){
-        $this->atributo1 = $at1; 
+        $this->atributo1 = $at1;
         $this->atributo2 = $at2;
         $this->atributo3 = $at3;
     }

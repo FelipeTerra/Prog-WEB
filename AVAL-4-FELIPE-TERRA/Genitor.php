@@ -14,9 +14,9 @@ class Genitor extends Pessoa {
         $this->filhos[] = $filho;
     }
 
-    public function removerFilho($filho){
-        $this->filhos[] -= $filho;
-    }
+    // public function removerFilho($filho){
+    //     $this->filhos[] -= $filho;
+    // }
 
 
     // public function setFilhos(){
