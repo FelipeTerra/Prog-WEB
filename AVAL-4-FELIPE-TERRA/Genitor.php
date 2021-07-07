@@ -1,6 +1,7 @@
 <?php
 
 require_once('Pessoa.php');
+require_once('Filho.php');
 
 class Genitor extends Pessoa {
     protected $filhos;
@@ -14,19 +15,32 @@ class Genitor extends Pessoa {
         $this->filhos[] = $filho;
     }
 
-    // public function removerFilho($filho){
-    //     $this->filhos[] -= $filho;
-    // }
-
-
-    // public function setFilhos(){
-    //     $this->nome = $nome;
-    // }
+    public function removerFilho($filho){
+        $this->filhos[] -= $filho;
+    }
     
     public function getFilhos(){
         return $this->filhos;
     }
 
+    function getHtml(){
+        $f = "<ul>";
+        foreach($this->filhos as $l){
+            $f .= "<li>$l</li>";
+        }
+        $f .= "</ul>";
+
+        return "<p>" .
+        "Nome: "  .  $this->getNome()   ." | ".
+        "Idade: " .  $this->getIdade()  ." | ".
+        "CPF: "   .  $this->getCPF()    ." | ".
+        "</p>" .$f;
+    }
+
 }
 
 ?>
+
+<!-- public function setFilhos(){
+    $this->nome = $nome;
+} -->
