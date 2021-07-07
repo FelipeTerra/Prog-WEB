@@ -11,7 +11,7 @@ class Genitor extends Pessoa {
         $this->filhos = [];
     }
     
-    public function adicionarFilho($filho){
+    public function adicionarFilho(Filho $filho){
         $this->filhos[] = $filho;
     }
 
