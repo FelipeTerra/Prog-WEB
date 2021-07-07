@@ -24,7 +24,7 @@ class Aluno extends Pessoa {
         $this->matricula = $matricula;
     }
 
-        public function getMatricula(){
+    public function getMatricula(){
         return $this->matricula;
     }
     
