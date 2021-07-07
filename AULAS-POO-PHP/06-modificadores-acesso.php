@@ -18,7 +18,7 @@ class MinhaClasseBase {
 
 class MinhaSubClasse extends MinhaClasseBase {
         public function __construct($at1, $at2, $at3){
-            parent:: constuct($at1, $at2, $at3);
+            parent:: ___constuct($at1, $at2, $at3);
         }
 
         function imprimir(){
