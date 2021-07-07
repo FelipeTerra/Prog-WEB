@@ -15,8 +15,13 @@ class Genitor extends Pessoa {
         $this->filhos[] = $filho;
     }
 
-    public function removerFilho($filho){
-        $this->filhos[] -= $filho;
+    public function removerFilho(Filho $filho){
+
+        for ($i = 0; $i < count($this->filhos); ++$i){
+            if($this->filhos[$i]->getNome() == $filho->getNome()){
+                unset($this->filhos[$i]);
+            }
+        }       
     }
     
     public function getFilhos(){
@@ -24,17 +29,11 @@ class Genitor extends Pessoa {
     }
 
     function getHtml(){
-        $f = "<ul>";
-        foreach($this->filhos as $l){
-            $f .= "<li>$l</li>";
-        }
-        $f .= "</ul>";
-
         return "<p>" .
         "Nome: "  .  $this->getNome()   ." | ".
         "Idade: " .  $this->getIdade()  ." | ".
         "CPF: "   .  $this->getCPF()    ." | ".
-        "</p>" .$f;
+        "</p>";
     }
 
 }

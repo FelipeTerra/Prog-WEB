@@ -13,10 +13,15 @@ $f4 = new Filho("João Pedro", 6, 201611640055);
 
 $g1->adicionarFilho($f1);
 $g1->adicionarFilho($f2);
+$g1->adicionarFilho($f3);
+$g1->adicionarFilho($f4);
 
-$g2->adicionarFilho($f3);
-$g2->adicionarFilho($f4);
+$g1->removerFilho($f2);
 
 
 echo $g1->getHtml();
-echo $g2->getHtml();
+//echo $g2->getHtml();
+
+var_dump($g1);
+echo "<p>";
+var_dump($g2);
