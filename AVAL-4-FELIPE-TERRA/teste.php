@@ -14,7 +14,8 @@ $filho2 = new Filho($g1, $g2, "Gustavo Oliveira", 6, 201611640055);
 $filho3 = new Filho($g3, $g4, "Maria Costa", 6, 201611640055);
 $filho4 = new Filho($g3, $g4,"João Pedro", 6, 201611640055);
 
-$familia1 = new Familia($g1, $g2, $filho1);
+$familia1 = new Familia($g1, $g2);
+$familia1->addFilho($filho);
 
 
 echo "<p> ----- Genitores ----- </p>";

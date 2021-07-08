@@ -30,6 +30,8 @@ class Familia {
 
     public function addFilho(Filho $filho){
         $this->Filhos[] = $filho;
+        $this->Pai->adicionarFilho($filho);
+        $this->Mae->adicionarFilho($filho);
     }
 
     public function getFilho(){
