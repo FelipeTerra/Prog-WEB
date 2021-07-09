@@ -10,8 +10,7 @@ class Familia {
     {
         $this->Pai = $pai;
         $this->Mae = $mae;
-        $this->Filhos = [];
-        
+        $this->Filhos = [];        
     }
 
     public function setPai(Genitor $pai){
@@ -34,24 +33,33 @@ class Familia {
         $this->Mae->adicionarFilho($filho);
     }
 
+    public function removeFilho(Filho $filho){
+        $this->Pai->removerFilho($filho);
+        $this->Mae->removerFilho($filho);
+    }
+
     public function getFilho(){
         return $this->Filhos;
     }
 
+    // essa parte deu um trabalho bem chatinho em, mas pelo meos deu certo
     function getHtml(){
-        // $f = "<ul>";
-        // foreach ($this->Filhos as $i){
-        //     $f .= "<li> $i </li>";
-        // }
-        // $f .= "</ul>";
-        return "<p>" .
-        "Nome do Pai: " .  $this->Pai->getNome() ." | ".
-        "Nome da Mãe: " .  $this->Mae->getNome() ." <br> ".
-        "</p>";
+        
+        $f = "</ul>";
+        for($i = 0; $i < count($this->Filhos); ++$i){
+            $teste = $this->Filhos[$i];
+            $f .= "<li>".$teste->getHtml()."</li>";
+        }
+        $f .= "</ul>";
+
+        return
+        "<p> ------------- Pais ------------- </p>" .
+        "Dados Pai -> " . $this->Pai->getHtml() .
+        "Dados Mãe -> " . $this->Mae->getHtml() .
+
+        "------------- Filhos ------------- </p>" . $f
+        ."<br><br>"; 
     }
 }
 
 ?>
-<!-- "Nome: "        .  $this->getNome()   ." | ".
-"Idade: "       .  $this->getIdade()  ." | ".
-"CPF: "         .  $this->getCPF()    ." | ". -->

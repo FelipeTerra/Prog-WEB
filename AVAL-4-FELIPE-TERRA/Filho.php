@@ -29,11 +29,10 @@ class Filho extends Pessoa {
     }
 
     function getHtml(){
-        return "<p>" .
+        return 
         "Nome: "  .  $this->getNome()   ." | ".
         "Idade: " .  $this->getIdade()  ." | ".
-        "CPF: "   .  $this->getCPF()    ." | ".
-        "</p>";
+        "CPF: "   .  $this->getCPF()    ." | ";
     }
 
 }
