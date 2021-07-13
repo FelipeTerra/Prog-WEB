@@ -6,8 +6,8 @@ require_once('Genitor.php');
 class Filho extends Pessoa {
     protected $Pai, $Mae;
 
-    public function __construct(Genitor $pai, Genitor $mae, $nome='', $idade=0, $cpf=0, $teste=''){
-        parent::__construct($nome, $idade, $cpf,$teste);
+    public function __construct(Genitor $pai, Genitor $mae, $nome='', $idade=0, $cpf=0){
+        parent::__construct($nome, $idade, $cpf);
         $this->Pai = $pai;
         $this->Mae = $mae;
     }
@@ -29,10 +29,11 @@ class Filho extends Pessoa {
     }
 
     function getHtml(){
-        return 
+        return "<p>" .
         "Nome: "  .  $this->getNome()   ." | ".
         "Idade: " .  $this->getIdade()  ." | ".
-        "CPF: "   .  $this->getCPF()    ." | ";
+        "CPF: "   .  $this->getCPF()    ." | ".
+        "</p>";
     }
 
 }
