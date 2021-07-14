@@ -12,7 +12,9 @@ if (!$mysqli->connect_errno){
     echo "<p>Conectado ao banco de dados!</p>";
     $conecado = true;
 }
-else
-echo "<p>Não conectado ao banco de dados. Erro na conexão</p>";
+else{
+    echo "<p>Não conectado ao banco de dados. Erro na conexão</p>";
+    die();
+}
 
 ?>
