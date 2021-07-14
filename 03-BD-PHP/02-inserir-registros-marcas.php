@@ -3,7 +3,6 @@
 require_once('01-conexao.php');
 
 // Modo de Insert - 01
-
 $sql = "INSERT INTO marcas (nome) VALUES(\"Sony\")";
 if ($mysqli->query($sql))
     echo "<p>Registro inserido</p>";
@@ -12,7 +11,6 @@ echo "<p>Fala ao inserir registro</p>";
 
 
 // Modo de Insert - 02
-/*
 $sql = "INSERT INTO marcas (nome) VALUES( ? )";
 $stmt = $mysqli->prepare($sql);
 
@@ -34,7 +32,7 @@ if ($stmt) {
         echo "<p>Fala ao inserir registros</p>";
 
     $stmt->close();
-} */
+} 
 
 
 
