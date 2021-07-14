@@ -5,7 +5,6 @@ require_once('04-marcas.php');
 
 if ($conectado) {
     $marcas = getMarcas();
-
 }
 
 ?>
