@@ -27,7 +27,7 @@ require_once("conexao.php");
         <section id="form">
             <p><h2>Informe os dados do produto</h2></p>
 
-            <form action="conteudo.php" method="POST">
+            <form action="produtos.php" method="POST">
                 <imput type="hidden" name="id" value="">
 
                     <table id="table-form">
