@@ -1,0 +1,113 @@
+/* ------------- Style Global ------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f0f2f5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    width: min(90vw, 600px);
+    margin: auto;
+}
+
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: #363f5f;
+    font-weight: normal;
+}
+
+/* ------------- Style Header ------------- */
+
+header {
+    background: rgb(12, 28, 42);
+    padding: 6rem 0 10rem;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-weight: bolder;
+}
+
+/* ------------- Style Main ------------- */
+
+#form {
+    margin-top: -8rem;
+}
+
+#form h2 {
+    text-align: center;
+    color: white;
+    font-weight: 100;
+}
+
+.card {
+    width: 600px;
+    background-color: white;
+    padding: 2rem 2rem;
+    border-radius: 0.25rem;
+    border-color: white;
+    margin-bottom: 1rem;
+    color: #363f5f;
+    
+}
+
+#button{
+    width: 600px;
+    background: rgb(17, 55, 88);
+    padding: 2rem 2rem;
+    border-radius: 0.50rem;
+    border-color: white;
+    margin-bottom: 1rem;
+}
+
+button h1{
+    color: white;
+}
+
+/* ------------- Style Table ------------- */
+#data-table{
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: #969cb3;
+}
+
+table th {
+    background: white;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+table thead th{
+    border-radius: 0.25rem;
+}
+
+table tr {
+    opacity: 0.7;
+}
+
+table tr:hover {
+    opacity: 1;
+}
+
+table tbody td {
+    background: white;
+    padding: 1 rem 2 rem;
+    font-weight: normal;
+}
+
+/* ------------- Style footer ------------- */
+footer{
+    padding: 4rem 0 1rem 0;
+    text-align: center;
+    font-weight: normal;
+    color: #969cb3;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aval-02-Felipe-Terra</title>
+
+    <link rel="stylesheet" href="./Styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat: wght @ 100; 200; 300; 400; 500; 600; 700; 800; 900 & display = swap"
+        rel="stylesheet">
+</head>
+
+<script type="text/javascript">
+
+    function nomeOk() {
+        let nomeImput = document.getElementById('id_nome');
+        let nome = nomeImput.value;
+        if (nome.trim().length < 2) {
+            alert('Nome muito curto');
+            return false;
+        }
+        else if (nome.trim().length > 100) {
+            alert('Nome muito longo');
+            return false;
+        }
+        return true;
+    }
+
+    function marcaOk() {
+        let marcaImput = document.getElementById('id_marca');
+        let marca = marcaImput.value;
+        if (marca.trim().length < 2) {
+            alert('Nome da marca muito curto');
+            return false;
+        }
+        else if (marca.trim().length > 20) {
+            alert('Nome da marca muito longo');
+            return false;
+        }
+        return true;
+    }
+
+    // function quantidadeOk(){
+    //     let quantidadeImput = document.getElementById('id_quantidade');
+    //     let quantidade = quantidadeImput.value;
+    //     if (quantidade.value == ''){
+    //         alert ('A quantidade deve ser igual ou maior que ZERO');
+    //         return false;
+    //     }
+    //     else if (quantidade.length > 0){
+    //         alert ('A quantidade deve ser menor ou igual a 100');
+    //         return false;
+    //     }
+    //     return true;
+    // }
+
+    // function precoOk(){
+    //     let precoImput = document.getElementById('id_preco');
+    //     let preco = precoImput.value;
+    //     if (preco.length == '' || isNaN(preco)){
+    //         alert ('A quantidade deve ser igual ou maior que ZERO');
+    //         return false;
+    //     }
+    //     return true;
+    // }
+
+    function validarForm() {
+        return nomeOk() && marcaOk();
+    }
+</script>
+
+<body>
+
+    <header>
+        <h1>Cadastro de Produtos</h1>
+    </header>
+
+    <main class="container">
+        <section id="form">
+            <p>
+            <h2>Informe os dados do produto</h2>
+            </p>
+
+            <form action="http://localhost:3000" method="post" onsubmit="return ( validarForm () ) ">
+
+                <p><input class="card" id="id_nome" type="text" name="nome" minlength="2" maxlength="100"
+                        placeholder="Nome do Pruduto" /></p>
+
+                <p><input class="card" id="id_marca" type="text" name="marca" minlength="2" maxlength="20"
+                        placeholder="Marca" /></p>
+
+                <p><input class="card" id="id_quantidade" type="number" min="0" max="100" name="quantidade"
+                        placeholder="Quantidade" /></p>
+
+                <p><input class="card" id="id_preco" type="number" name="preco" placeholder="Preço" /></p>
+
+                <p><button id="button" type="submit">
+                        <h1>Incluir</h1>
+                    </button></p>
+
+            </form>
+        </section>
+
+        <section id="table">
+            <p>
+            <h2>Lista de Produtos</h2>
+            </p>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Nome do Produto</th>
+                        <th>Marca</th>
+                        <th>Quantidadde</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Atividade Avaliativa - 2 - Felipe Terra Nascimento de Oliveira</p>
+        <p>RGA: 201611640044</p>
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
+
+<!-- Construir um formulário HTML contendo os seguintes campos:
+- Nome do Produto (minimo 2, máximo 100 caracteres)
+- Marca (minimo 2, máximo 20 caracteres)
+- Quantidade (mínimo 0, máximo 100)
+- Preço (mínimo 0, sem máximo)
+
+No HTML deve haver um botão 'Incluir'. Esse botão deve ter a seguinte finalidade:
+- Verificar se todos os requisitos de mínimos e máximos (limites) foram atendidos
+- Se não foram, destacar em vermelho os campos do formulário que contém erros de limite
+- Se foram atendidos, apagar os dados do formulário e acrescentar um objeto contendo os dados dentro de
+  um array chamado 'produtos' e atualizar uma tabela html logo abaixo do formulário que imprime
+  todos os dados do 'produtos'.
+
+Atenção:
+- Não utilizar jquery ou qualquer outra biblioteca ou framework javascript
+- Você deve fazer em javascript puro (vannila js)
+- Cópias de código não serão toleradas -->
