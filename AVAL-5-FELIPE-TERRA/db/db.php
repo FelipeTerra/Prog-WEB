@@ -1,6 +1,7 @@
 <?php
 
 class Db {    
+
     private $host;
     private $user;
     private $passwd;
@@ -8,13 +9,7 @@ class Db {
     private $mysqli;
     private $connected;
 
-    public static function getInstance() {
-        global $db_host, $db_user, $db_password, $db_database;
-        $instance = new Db($db_host, $db_user, $db_password, $db_database);
-        return $instance;
-    }
-
-    private function __construct($host, $user, $passwd, $db) {
+    public function __construct($host, $user, $passwd, $db) {
         $this->host   = $host;
         $this->user   = $user;
         $this->passwd = $passwd;
@@ -44,7 +39,7 @@ class Db {
         if ($this->connected) {
             $res = $this->mysqli->query($sql);
         }        
-        return $res;            
+        return $res;
     }
     
     public function prepare($sql) : mysqli_stmt {

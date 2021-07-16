@@ -30,7 +30,7 @@ class daoProduto {
     }
 
     public function todos(): array {
-        $sql = "SELECT produtos.id, produtos.nome FROM produtos";
+        $sql = "SELECT id, nome FROM produtos";
         $stmt = $this->connection->prepare($sql);
         $produtos = [];
         if ($stmt) {
