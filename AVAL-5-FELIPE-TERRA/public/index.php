@@ -1,9 +1,3 @@
-<?php
-
-require_once("conexao.php");
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,7 +21,7 @@ require_once("conexao.php");
         <section id="form">
             <p><h2>Informe os dados do produto</h2></p>
 
-            <form action="produtos.php" method="POST">
+            <form  method="POST">
                 <imput type="hidden" name="id" value="">
 
                     <table id="table-form">
