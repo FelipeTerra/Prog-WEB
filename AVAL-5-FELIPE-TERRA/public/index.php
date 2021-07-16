@@ -21,7 +21,7 @@
         <section id="form">
             <p><h2>Informe os dados do produto</h2></p>
 
-            <form  method="POST">
+            <form action="salvar.php" method="POST">
                 <imput type="hidden" name="id" value="">
 
                     <table id="table-form">
