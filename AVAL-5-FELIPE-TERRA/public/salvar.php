@@ -16,6 +16,8 @@ $daoProduto = new DaoProduto($conn);
 $novoProduto = new Produto($_POST['nome']);
 
 $daoProduto->inserir($novoProduto);
+
+//var_dump($novoProduto); verificando se os argumentos foram passados corretamente
     
 header('Location: ./index.php');
 

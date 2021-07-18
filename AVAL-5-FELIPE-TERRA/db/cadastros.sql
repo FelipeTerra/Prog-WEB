@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Jul-2021 às 02:51
+-- Tempo de geração: 19-Jul-2021 às 00:47
 -- Versão do servidor: 10.4.19-MariaDB
 -- versão do PHP: 8.0.6
 
@@ -33,6 +33,20 @@ CREATE TABLE `produtos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Extraindo dados da tabela `produtos`
+--
+
+INSERT INTO `produtos` (`id`, `nome`) VALUES
+(1, 'Smartphone Samsung S10'),
+(2, 'Iphone 12'),
+(3, 'Smartphone Moto G9'),
+(4, 'Notebook Lenovo Ideapad 3'),
+(5, 'Notebook Asus'),
+(6, 'Smartphone Samsung S21 Ultra'),
+(7, 'Xiaomi Redmi Note 8 Pro'),
+(8, 'Smartphone Oneplus 9');
+
+--
 -- Índices para tabelas despejadas
 --
 
@@ -50,7 +64,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

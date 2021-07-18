@@ -39,7 +39,7 @@ class daoProduto {
             $stmt->bind_result($id, $nome);
             $stmt->store_result();
             while($stmt->fetch()) {
-              $produtos[] = new Produto($id, $nome);
+              $produtos[] = new Produto($nome, $id);
             }
           }
           $stmt->close();

@@ -1,25 +1,3 @@
-
-<?php
-
-require_once(__DIR__ . '/../db/Db.php');
-require_once(__DIR__ . '/../config/config.php');
-require_once(__DIR__ . '/../model/Produto.php');
-require_once(__DIR__ . '/../dao/DaoProduto.php');
-
-$conn = new Db(Config::db_host, Config::db_user, Config::db_password, Config::db_database);
-
-if (! $conn->connect()) {
-    die();
-}
-
-$daoProduto = new DaoProduto($conn);
-
-$produtos = $daoProduto->todos();
-
-ob_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -76,14 +54,30 @@ ob_start();
                 </thead>
                 <tbody>
                     <?php
-                        global $produtos;
+                        require_once(__DIR__ . '/../db/db.php');
+                        require_once(__DIR__ . '/../config/config.php');
+                        require_once(__DIR__ . '/../model/produto.php');
+                        require_once(__DIR__ . '/../dao/daoProduto.php');
+                        
+                        $conn = new Db(Config::db_host, Config::db_user, Config::db_password, Config::db_database);
+                        
+                        if (! $conn->connect()) {
+                            die();
+                        }
+                        
+                        $daoProduto = new DaoProduto($conn);
+                                                
+                        $produtos = $daoProduto->todos();
+                                                
+                        ob_start();
+
                         if (count($produtos) > 0) {
-                            echo "<tr>";
                             foreach($produtos as $produto) {
-                                echo "<td>" . $produto->getId() . "</td>";
-                                echo "<td>" . $produto->getNome() . "</td>";
-                            }
-                            echo "</tr>";    
+                                echo "<tr>" .
+                                        "<td>" . $produto->getId()   . "</td>" .
+                                        "<td>" . $produto->getNome() . "</td>" .
+                                     "</tr>";
+                            }    
                         }
                         else{
                             echo "<table id= \"data-table\">";                            
@@ -91,8 +85,7 @@ ob_start();
                                     echo "  <td><h4>Nehum produto cadastrado</h4></td>";
                                 echo "<tr>";
                             echo "</table>";
-                        } 
-                    
+                        }                    
                     ?>
                 </tbody>
             </table>
